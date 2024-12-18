@@ -1,0 +1,18 @@
+
+.app-datepicker, .app-material-datepicker {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .col-md-6 {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 18px;
+    color: #333;
+  }
+  

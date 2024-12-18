@@ -1,0 +1,26 @@
+<div class="datepicker-wrapper">
+    <div class="input-container">
+        <input type="text" placeholder="Choose a date" [(ngModel)]="selectedDate" readonly (click)="toggleCalendar()" />
+        <span class="calendar-icon" (click)="toggleCalendar()">📅</span>
+    </div>
+    <div class="calendar-panel" *ngIf="showCalendar">
+        <div class="calendar-header">
+            <button (click)="previousMonth()">«</button>
+            <span>{{ months[currentMonth] }} {{ currentYear }}</span>
+            <button (click)="nextMonth()">»</button>
+        </div>
+        <div class="calendar-body">
+            <div class="day-names">
+                <span *ngFor="let day of days">{{ day }}</span>
+            </div>
+            <div class="days-grid">
+                <span *ngFor="let date of dates" [class.disabled]="!date" (click)="selectDate(date)">
+                    {{ date }}
+                </span>
+            </div>
+        </div>
+        <div class="calendar-footer">
+            <button (click)="clearDate()">Clear</button>
+        </div>
+    </div>
+</div>
